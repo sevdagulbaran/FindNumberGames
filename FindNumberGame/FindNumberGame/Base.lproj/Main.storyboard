@@ -1,24 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FindNumberGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="message" image="bg.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="h1H-kg-oFe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIND NUMBER GAMES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gm-UM-bBm">
+                                <rect key="frame" x="20" y="54" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="random" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTw-yX-zuo">
+                                <rect key="frame" x="20" y="107.5" width="374" height="48"/>
+                                <accessibility key="accessibilityConfiguration" identifier="random"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsv-1O-fjZ">
+                                <rect key="frame" x="20" y="175.5" width="374" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="message"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="number" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Number." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Pg-HJ-Gk9">
+                                <rect key="frame" x="30" y="255.5" width="364" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="btn" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxh-I1-bt0">
+                                <rect key="frame" x="50" y="299.5" width="314" height="31"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GUESS" titleAlignment="center">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="star" text=" ⭐ ⭐ ⭐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8J-up-OMe">
+                                <rect key="frame" x="20" y="380.5" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENTER A NUMBER BETWEEN 1 AND 10..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCl-k3-n0z">
+                                <rect key="frame" x="20" y="478.5" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Pg-HJ-Gk9" secondAttribute="trailing" constant="30" id="1aB-pu-Ky6"/>
+                            <constraint firstItem="0Pg-HJ-Gk9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1yO-t6-beF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Pg-HJ-Gk9" secondAttribute="trailing" constant="20" id="6IT-Cz-4h8"/>
+                            <constraint firstItem="0Pg-HJ-Gk9" firstAttribute="top" secondItem="Tsv-1O-fjZ" secondAttribute="bottom" constant="50" id="8xk-cW-1vT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9gm-UM-bBm" secondAttribute="trailing" constant="20" id="CZc-Pj-ZFr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A8J-up-OMe" secondAttribute="trailing" constant="20" id="EED-kG-b86"/>
+                            <constraint firstItem="kCl-k3-n0z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Eh7-Je-z53"/>
+                            <constraint firstItem="Dxh-I1-bt0" firstAttribute="top" secondItem="0Pg-HJ-Gk9" secondAttribute="bottom" constant="20" id="Ise-Ti-cKT"/>
+                            <constraint firstItem="h1H-kg-oFe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KrH-8l-Pkk"/>
+                            <constraint firstItem="A8J-up-OMe" firstAttribute="top" secondItem="Dxh-I1-bt0" secondAttribute="bottom" constant="50" id="MeK-M8-xm0"/>
+                            <constraint firstAttribute="bottom" secondItem="h1H-kg-oFe" secondAttribute="bottom" id="NOC-6g-AA6"/>
+                            <constraint firstItem="A8J-up-OMe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Og0-lD-YHi"/>
+                            <constraint firstItem="h1H-kg-oFe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Spj-np-cpa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dxh-I1-bt0" secondAttribute="trailing" constant="50" id="T3v-zv-GaC"/>
+                            <constraint firstItem="0Pg-HJ-Gk9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ais-pS-KVt"/>
+                            <constraint firstItem="Dxh-I1-bt0" firstAttribute="top" secondItem="0Pg-HJ-Gk9" secondAttribute="bottom" constant="10" id="dOc-eB-Coz"/>
+                            <constraint firstItem="kCl-k3-n0z" firstAttribute="top" secondItem="A8J-up-OMe" secondAttribute="bottom" constant="50" id="dQM-ZK-PPh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iTw-yX-zuo" secondAttribute="trailing" constant="20" id="fhn-C1-Ahv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h1H-kg-oFe" secondAttribute="bottom" id="gn6-vZ-lhm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kCl-k3-n0z" secondAttribute="trailing" constant="20" id="hOh-qh-sb3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tsv-1O-fjZ" secondAttribute="trailing" constant="20" id="iv0-S3-uk5"/>
+                            <constraint firstItem="iTw-yX-zuo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="n3J-E6-df1"/>
+                            <constraint firstItem="iTw-yX-zuo" firstAttribute="top" secondItem="9gm-UM-bBm" secondAttribute="bottom" constant="20" id="nGd-Tq-KK4"/>
+                            <constraint firstItem="Tsv-1O-fjZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o2z-bA-HVo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h1H-kg-oFe" secondAttribute="trailing" id="oQC-pw-Iby"/>
+                            <constraint firstItem="Dxh-I1-bt0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="qIJ-do-yNi"/>
+                            <constraint firstItem="9gm-UM-bBm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qqW-L1-bRS"/>
+                            <constraint firstItem="Tsv-1O-fjZ" firstAttribute="top" secondItem="iTw-yX-zuo" secondAttribute="bottom" constant="20" id="tRG-JK-Yvv"/>
+                            <constraint firstItem="9gm-UM-bBm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zV3-5F-08M"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg.jpeg" width="1000" height="1080"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

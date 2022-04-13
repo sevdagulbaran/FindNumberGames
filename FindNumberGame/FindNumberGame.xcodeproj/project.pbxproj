@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		529557672807590500D8642E /* bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 529557662807590500D8642E /* bg.jpeg */; };
 		52AB6779280618FE00592378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB6778280618FE00592378 /* AppDelegate.swift */; };
 		52AB677B280618FE00592378 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB677A280618FE00592378 /* SceneDelegate.swift */; };
 		52AB677D280618FE00592378 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB677C280618FE00592378 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		529557662807590500D8642E /* bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg.jpeg; path = ../../../../../Downloads/bg.jpeg; sourceTree = "<group>"; };
 		52AB6775280618FE00592378 /* FindNumberGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindNumberGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB6778280618FE00592378 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52AB677A280618FE00592378 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				52AB677E280618FE00592378 /* Main.storyboard */,
 				52AB67812806190000592378 /* Assets.xcassets */,
 				52AB67832806190000592378 /* LaunchScreen.storyboard */,
+				529557662807590500D8642E /* bg.jpeg */,
 				52AB67862806190000592378 /* Info.plist */,
 			);
 			path = FindNumberGame;
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529557672807590500D8642E /* bg.jpeg in Resources */,
 				52AB67852806190000592378 /* LaunchScreen.storyboard in Resources */,
 				52AB67822806190000592378 /* Assets.xcassets in Resources */,
 				52AB6780280618FE00592378 /* Main.storyboard in Resources */,
