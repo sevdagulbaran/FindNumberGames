@@ -100,6 +100,13 @@
                             <constraint firstItem="9gm-UM-bBm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zV3-5F-08M"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btn" destination="Dxh-I1-bt0" id="ULZ-KN-AcD"/>
+                        <outlet property="message" destination="Tsv-1O-fjZ" id="H25-jx-dKU"/>
+                        <outlet property="number" destination="0Pg-HJ-Gk9" id="y1P-HY-cNx"/>
+                        <outlet property="random" destination="iTw-yX-zuo" id="hXl-SY-HiK"/>
+                        <outlet property="star" destination="A8J-up-OMe" id="t9I-RJ-ATa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
